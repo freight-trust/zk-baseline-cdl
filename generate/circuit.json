@@ -1,0 +1,59 @@
+{
+  "mainCode": "{\n}\n",
+  "signalName2Idx": {
+    "one": 0,
+    "main.hash": 2,
+    "main.age": 3,
+    "main.oldEnough": 1
+  },
+  "components": [
+    {
+      "name": "main",
+      "params": {},
+      "template": "over18",
+      "inputSignals": 2
+    }
+  ],
+  "componentName2Idx": {
+    "main": 0
+  },
+  "signals": [
+    {
+      "names": ["one"],
+      "triggerComponents": []
+    },
+    {
+      "names": ["main.oldEnough"],
+      "triggerComponents": []
+    },
+    {
+      "names": ["main.hash"],
+      "triggerComponents": [0]
+    },
+    {
+      "names": ["main.age"],
+      "triggerComponents": [0]
+    }
+  ],
+  "constraints": [
+    [
+      {},
+      {},
+      {
+        "0": "1",
+        "1": "21888242871839275222246405745257275088548364400416034343698204186575808495616"
+      }
+    ]
+  ],
+  "templates": {
+    "over18": "function(ctx) {\n    ctx.setSignal(\"oldEnough\", [], bigInt(bigInt(ctx.getSignal(\"age\", [])).greaterOrEquals(bigInt(\"18\")) ? 1 : 0).neq(bigInt(0)) ? (\"1\") : (\"0\"));\n    ctx.assert(ctx.getSignal(\"oldEnough\", []), \"1\");\n}\n"
+  },
+  "functions": {},
+  "nPrvInputs": 1,
+  "nPubInputs": 1,
+  "nInputs": 2,
+  "nOutputs": 1,
+  "nVars": 4,
+  "nConstants": 0,
+  "nSignals": 4
+}

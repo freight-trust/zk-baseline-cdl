@@ -1,0 +1,38 @@
+{
+  "name": "wdt-loading",
+  "version": "0.1.0",
+  "title": "wdtLoading - Application loading screen",
+  "description": "Asana like application loading screen with custom phrases support",
+  "homepage": "http://ned.im/wdtLoading",
+  "keywords": [
+    "loading",
+    "spinner",
+    "plugin",
+    "application",
+    "javascript",
+    "wdt"
+  ],
+  "author": {
+    "name": "Nedim Arabacı",
+    "url": "http://github.com/needim/"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "grunt build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/needim/wdtLoading.git"
+  },
+  "bugs": {
+    "url": "https://github.com/needim/wdtLoading/issues"
+  },
+  "main": "wdtLoading.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-bump": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.1"
+  }
+}
